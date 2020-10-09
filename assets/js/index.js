@@ -50,20 +50,38 @@ function getUserInof() {
     });
 }
 
-// 封装用户头像渲染函数
+// // 封装用户头像渲染函数
+// function renderAvatar(user) {
+//     // 1.用户名（昵称优先 没有用 username）
+//     var name = user.nickname || user.username;
+//     $("#welcome").html('欢迎&nbsp;&nbsp;' + name);
+//     // 2.用户头像
+//     if (user.user_pic !== null) {
+//         // 有头像
+//         $('.layui-nav-img').show().attr('src', user.user_pic);
+//         $('.user-avatar').hide();
+//     } else {
+//         // 没头像
+//         $('.layui-nav-img').hide();
+//         var text = name[0].toUpperCase();
+//         $('.user-avatar').show().html(text);
+//     }
+// }
+// 封装用户头像渲染函数
 function renderAvatar(user) {
-    // 1.用户名（昵称优先 没有用 username）
+    // 1.用户名（昵称优先 没有用 username）
     var name = user.nickname || user.username;
     $("#welcome").html('欢迎&nbsp;&nbsp;' + name);
-    // 2.用户头像
+    // 2.用户头像
     if (user.user_pic !== null) {
-        // 有头像
+        //     // if (false) {
+        //     // 有头像
         $('.layui-nav-img').show().attr('src', user.user_pic);
-        $('.user-avatar').hide();
+        $('.text-avatar').hide();
     } else {
-        // 没头像
+        // 没头像
         $('.layui-nav-img').hide();
         var text = name[0].toUpperCase();
-        $('.user - avatar').show().html(text);
+        $('.text-avatar').show().html(text);
     }
-}
+} 
